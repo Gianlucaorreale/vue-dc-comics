@@ -1,17 +1,21 @@
 <template>
 <div>
   <BaseHeader/>
+  <BaseSecondHeader/>
+
   <main></main>
   <footer></footer>
 </div>
 </template>
 
 <script>
+import BaseSecondHeader from "./components/BaseSecondHeader.vue";
 import BaseHeader from "./components/BaseHeader.vue";
 export default {
   name:" vue-dc-comics",
   components: {
-    BaseHeader
+    BaseHeader,
+    BaseSecondHeader
   }
 }
 </script>
