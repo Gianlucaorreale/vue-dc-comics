@@ -1,14 +1,18 @@
 <template>
 <div>
-  <header></header>
+  <BaseHeader/>
   <main></main>
   <footer></footer>
 </div>
 </template>
 
 <script>
+import BaseHeader from "./components/BaseHeader.vue";
 export default {
   name:" vue-dc-comics",
+  components: {
+    BaseHeader
+  }
 }
 </script>
 
@@ -35,7 +39,7 @@ img{
   a{
     text-decoration: none;
   }
-  
+
   /*Utils*/
   .container{
     margin: 0 auto;
