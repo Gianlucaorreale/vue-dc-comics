@@ -33,7 +33,7 @@
 <style scoped>
 
   .container{
-    height: 200px;
+    height: 100px;
     display:flex;
     justify-content: space-between;
   }
@@ -45,10 +45,6 @@
 
   li{
     margin: 5px;
-  }
-
-  img{
-    margin-top: 50px;
   }
 
   ul{

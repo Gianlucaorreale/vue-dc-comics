@@ -15,12 +15,17 @@
 <style scoped>
 
     .second-header{
-      height: 200px;  
+      height: 100px;  
       background-color: black;
     }
 
+    .container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
     h1{
-        padding-top: 70px;
-        color: white;
+      color: white;
     }
 </style>

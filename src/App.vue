@@ -3,11 +3,12 @@
   <BaseHeader/>
   <BaseSecondHeader/>
   <BaseMain/>
-  <footer></footer>
+  <BaseFooter/>
 </div>
 </template>
 
 <script>
+import BaseFooter from "./components/BaseFooter.vue";
 import BaseMain from "./components/BaseMain.vue";
 import BaseSecondHeader from "./components/BaseSecondHeader.vue";
 import BaseHeader from "./components/BaseHeader.vue";
@@ -16,7 +17,8 @@ export default {
   components: {
     BaseHeader,
     BaseSecondHeader,
-    BaseMain
+    BaseMain,
+    BaseFooter
   }
 }
 </script>
