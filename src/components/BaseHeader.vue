@@ -8,16 +8,10 @@
     </figure>
     <nav>
       <ul>
-        <li><a href="#">CHARACTERS</a></li>
-        <li><a href="#">COMICS</a></li>
-        <li><a href="#">MOVIES</a></li>
-        <li><a href="#">TV</a></li>
-        <li><a href="#">GAMES</a></li>
-        <li><a href="#">COLLECTIBLES</a></li>
-        <li><a href="#">VIDEOS</a></li>
-        <li><a href="#">FANS</a></li>
-        <li><a href="#">NEWS</a></li>
-        <li><a href="#">SHOP</a></li>
+        <li v-for="link in links" :key="link.text">
+        <a :href="link.url"
+        >{{link.text}}</a>
+        </li>
       </ul>
     </nav>
     </div>
@@ -27,6 +21,22 @@
 <script>
    export default{
        name: "BaseHeader",
+       data(){
+        return{
+          links: [
+            {url: '#', text:'CHARACTERS'},
+            {url: '#', text:'COMICS'},
+            {url: '#', text:'MOVIES'},
+            {url: '#', text:'TV'},
+            {url: '#', text:'GAMES'},
+            {url: '#', text:'COLLETTIBLES'},
+            {url: '#', text:'VIDEOS'},
+            {url: '#', text:'FANS'},
+            {url: '#', text:'NEWS'},
+            {url: '#', text:'SHOP'},
+          ]
+        }
+       }
    }
 </script>
 
@@ -45,6 +55,14 @@
 
   li{
     margin: 5px;
+  }
+
+  a:hover{
+    color: white;
+  }
+
+  li:hover{
+    background-color: #0282F9;
   }
 
   ul{

@@ -6,42 +6,29 @@
               <div class="first-col">
                     <ul>
                       <li><a href="#"><h2>DC COMICS</h2></a></li>
-                      <li><a href="#">characters</a></li>
-                      <li><a href="#">comics</a></li>
-                      <li><a href="#">movies</a></li>
-                      <li><a href="#">TV</a></li>
-                      <li><a href="#">games</a></li>
-                      <li><a href="#">videos</a></li>
-                      <li><a href="#">news</a></li>
-                   </ul>
+                      <li v-for="comic in comics" :key="comic.text" >
+                      <a :href="comic.url">
+                      {{comic.text}}</a></li>
+                    </ul>
                    <ul>
                       <li><a href="#"><h2>SHOP</h2></a></li>
-                      <li><a href="#">shop DC</a></li>
-                      <li><a href="#">shop DC collectible</a></li>
+                      <li v-for="shop in shops" :key="shop.text">
+                      <a :href="shop.url">
+                      {{shop.text}}</a></li>
                    </ul>
               </div>
-              <ul>
+                <ul>
                      <li><a href="#"><h2>SITES</h2></a></li>
-                     <li><a href="#">DC</a></li>
-                     <li><a href="#">MAD magazine</a></li>
-                     <li><a href="#">DC kids</a></li>
-                     <li><a href="#">DC universe</a></li>
-                     <li><a href="#">DC power visa</a></li>
-              </ul>
+                     <li v-for="site in sites" :key="site.text">
+                     <a :href="site.url">
+                     {{site.text}}</a></li>
+                </ul>
               
               <ul>
                  <li><a href="#"><h2>DC</h2></a></li>
-                 <li><a href="#">terms of use</a></li>
-                 <li><a href="#">privacy policy (new)</a></li>
-                 <li><a href="#">Ad choises</a></li>
-                 <li><a href="#">adevertising</a></li>
-                 <li><a href="#">jobs</a></li>
-                 <li><a href="#">subscriptions</a></li>
-                 <li><a href="#">talent workshops</a></li>
-                 <li><a href="#">CPSC certificates</a></li>
-                 <li><a href="#">ratings</a></li>
-                 <li><a href="#">shop help</a></li>
-                 <li><a href="#">contact us</a></li>
+                 <li v-for="term in terms" :key="term.text">
+                 <a :href="term.url">
+                 {{term.text}}</a></li>
               </ul>
           </div>
           <div class="dc">
@@ -55,7 +42,48 @@
 <script>
    export default{
        name: "BaseMain",
+       data(){
+        return{
+          comics:[
+            {url: '#', text:'Characters'},
+            {url: '#', text:'Comics'},
+            {url: '#', text:'Movies'},
+            {url: '#', text:'TV'},
+            {url: '#', text:'Games'},
+            {url: '#', text:'Video'},
+            {url: '#', text:'News'},
+          ],
+          shops:[
+            {url:'#', text:'Shop DC'},
+            {url:'#', text:'Shop DC collectible'}
+          ],
+          sites:[
+            {url:'#', text:'DC'},
+            {url:'#', text:'MAD magazine'},
+            {url:'#', text:'DC kids'},
+            {url:'#', text:'DC universe'},
+            {url:'#', text:'DC Power Visa'},
+          ],
+          terms:[
+            {url:'#', text:'terms of use'},
+            {url:'#', text:'Privacy Policy(New)'},
+            {url:'#', text:'Ad Choises'},
+            {url:'#', text:'Advertising'},
+            {url:'#', text:'Jobs'},
+            {url:'#', text:'Subscriptions'},
+            {url:'#', text:'Talent Workshops'},
+            {url:'#', text:'CPSC Certificates'},
+            {url:'#', text:'Ratings'},
+            {url:'#', text:'Shop Help'},
+            {url:'#', text:'Contact Us'},
+          ],
+          image:[
+            {url:'../assets/img/dc-logo-bg.png'}
+            ]
+        }
+       }
    }
+
 </script>
 
 <style scoped>
