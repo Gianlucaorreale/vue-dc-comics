@@ -1,17 +1,19 @@
 <template>
   <section id="products">
     <div class="container boxes">
-      <div v-for="product in products" :key="product.series" class="product-card">
-        <img  :src="product.thumb" :alt= "product.series">
-        <h3> {{product.series}} </h3>
-      </div>
+     <ProductCard v-for="(product, i) in products " :key="i" :product="product"/>
     </div>
   </section>
 </template>
 
 <script>
-export default{
+
+import ProductCard from './components/ProductCard.vue';
+export default {
     name: 'TheProductSection',
+   components: {
+    ProductCard,
+ },
     data() {
      return {
       products: [
@@ -105,10 +107,5 @@ h3{
   display: flex;
   flex-wrap: wrap;
   padding-top: 2rem;
-}
-
-.product-card{
-  margin: 0 10px;
-  width: calc(100%/6 - 20px);
 }
 </style>
