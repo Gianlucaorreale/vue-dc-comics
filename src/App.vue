@@ -2,14 +2,14 @@
 <div>
   <BaseHeader/>
   <BaseSecondHeader/>
-  <TheMain/>
+  <TheProductSection/>
   <BaseFirstFooter/>
   <BaseSecondFooter/>
 </div>
 </template>
 
 <script>
-import TheMain from "./TheMain.vue";
+import TheProductSection from "./TheProductSection.vue";
 import BaseSecondFooter from "./components/BaseSecondFooter.vue";
 import BaseFirstFooter from "./components/BaseFirstFooter.vue";
 import BaseSecondHeader from "./components/BaseSecondHeader.vue";
@@ -23,7 +23,7 @@ export default {
     BaseSecondHeader,
     BaseSecondFooter,
     BaseFirstFooter,
-    TheMain,
+    TheProductSection,
 }
 }
 </script>
