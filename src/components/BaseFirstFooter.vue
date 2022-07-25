@@ -89,7 +89,7 @@
 <style scoped>
   .jumbo{
     
-    background-image: url(../assets/img/jumbotron.jpg);
+    background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     
 }
@@ -111,9 +111,12 @@ ul{
     padding: 20px;
 }
 
+h2{
+  color: white;
+}
+
 a{
- color: black;   
- text-shadow: 2px 2px white;  
+ color: lightgray;   
 }
 
 

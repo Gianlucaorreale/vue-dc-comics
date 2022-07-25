@@ -2,24 +2,29 @@
 <div>
   <BaseHeader/>
   <BaseSecondHeader/>
-  <BaseMain/>
-  <BaseFooter/>
+  <TheMain/>
+  <BaseFirstFooter/>
+  <BaseSecondFooter/>
 </div>
 </template>
 
 <script>
-import BaseFooter from "./components/BaseFooter.vue";
-import BaseMain from "./components/BaseMain.vue";
+import TheMain from "./TheMain.vue";
+import BaseSecondFooter from "./components/BaseSecondFooter.vue";
+import BaseFirstFooter from "./components/BaseFirstFooter.vue";
 import BaseSecondHeader from "./components/BaseSecondHeader.vue";
 import BaseHeader from "./components/BaseHeader.vue";
+
+
 export default {
   name:" vue-dc-comics",
   components: {
     BaseHeader,
     BaseSecondHeader,
-    BaseMain,
-    BaseFooter
-  }
+    BaseSecondFooter,
+    BaseFirstFooter,
+    TheMain,
+}
 }
 </script>
 

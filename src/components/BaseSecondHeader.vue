@@ -1,9 +1,6 @@
 <template>
    <div class="second-header">
-     <div class="container">
-        <h1>Content goes here</h1>
-     </div>
-   </div>
+    </div>
 </template>
 
 <script>
@@ -15,17 +12,10 @@
 <style scoped>
 
     .second-header{
-      height: 100px;  
-      background-color: black;
+     background-image: url(../assets/img/jumbotron.jpg);
+     background-size: cover;
+     height: 300px;
     }
 
-    .container{
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    h1{
-      color: white;
-    }
+    
 </style>
